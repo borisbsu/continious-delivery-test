@@ -63,6 +63,7 @@ public class CpvApp {
      * @throws UnknownHostException if the local host name could not be resolved into an address
      */
     public static void main(String[] args) throws UnknownHostException {
+        // Start the app.
         SpringApplication app = new SpringApplication(CpvApp.class);
         SimpleCommandLinePropertySource source = new SimpleCommandLinePropertySource(args);
         addDefaultProfile(app, source);
