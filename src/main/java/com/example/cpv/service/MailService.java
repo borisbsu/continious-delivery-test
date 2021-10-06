@@ -20,7 +20,7 @@ import javax.inject.Inject;
 import javax.mail.internet.MimeMessage;
 import java.util.Locale;
 
-/**
+/*
  * Service for sending e-mails.
  * <p>
  * We use the @Async annotation to send e-mails asynchronously.
@@ -52,6 +52,7 @@ public class MailService {
     public void sendEmail(String to, String subject, String content, boolean isMultipart, boolean isHtml) {
         log.debug("Send e-mail[multipart '{}' and html '{}'] to '{}' with subject '{}' and content={}",
             isMultipart, isHtml, to, subject, content);
+        Integer i;
 
         // Prepare message using a Spring helper
         MimeMessage mimeMessage = javaMailSender.createMimeMessage();
@@ -102,6 +103,8 @@ public class MailService {
         String content = templateEngine.process("passwordResetEmail", context);
         String subject = messageSource.getMessage("email.reset.title", null, locale);
         sendEmail(user.getEmail(), subject, content, false, true);
+        if (true) {
+        }
     }
-    
+
 }
