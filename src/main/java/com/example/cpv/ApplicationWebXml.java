@@ -1,3 +1,4 @@
+/** Some comment */
 package com.example.cpv;
 
 import com.example.cpv.config.Constants;
