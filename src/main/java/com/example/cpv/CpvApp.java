@@ -40,6 +40,7 @@ public class CpvApp {
      */
     @PostConstruct
     public void initApplication() {
+int i = 1;
         if (env.getActiveProfiles().length == 0) {
             log.warn("No Spring profile configured, running with default configuration");
         } else {
