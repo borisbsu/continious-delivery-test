@@ -63,7 +63,7 @@ To setup this project in Jenkins, use the following configuration:
     * Branches to build: `*/master`
     * Additional Behaviours: `Wipe out repository & force clone`
 * Build Triggers
-    * Poll SCM / Schedule: `H/5 * * * *`
+    * Poll SCM / Schedule: `H/5 * * * *`фыв
 * Build
     * Invoke Maven / Tasks: `-Pprod clean package`
     * Execute Shell / Command:
