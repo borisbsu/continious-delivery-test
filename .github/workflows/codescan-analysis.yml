@@ -42,7 +42,7 @@ jobs:
                     projectKey: march-2023
                     failOnRedQualityGate: true
                     args: |
-                        sonar.verbose=false
+                        sonar.verbose=true
                         sonar.java.binaries=.
 
             -   name: Upload SARIF file
