@@ -8,7 +8,7 @@ jobs:
         steps:
             # Checkout your code repository to scan
             -   name: Checkout repository
-                uses: actions/checkout@CD-2922
+                uses: actions/checkout@0f81b55162f6c96942fa06de71556c12e96e2f92
                 with:
                     # We must fetch at least the immediate parents so that if this is
                     # a pull request then we can checkout the head.
