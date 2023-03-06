@@ -40,6 +40,7 @@ jobs:
                     login: ${{secrets.SONAR_TEST_TOKEN}}
                     organization: b21
                     projectKey: march-2023
+                    failOnRedQualityGate: true
                     args: |
                         sonar.verbose=true
                         sonar.java.binaries=.
