@@ -42,7 +42,7 @@ jobs:
                     projectKey: march-2023
                     args: |
                         sonar.verbose=true
-                        sonar.java.binaries=target
+                        sonar.java.binaries=.
 
             -   name: Upload SARIF file
                 uses: github/codeql-action/upload-sarif@v1
