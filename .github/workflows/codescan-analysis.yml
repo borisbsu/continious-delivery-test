@@ -33,19 +33,17 @@ jobs:
                     key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
                     restore-keys: ${{ runner.os }}-m2
 
-            -   name: Build with Maven
-                run: mvn package -DskipTests
-
             -   name: Run Analysis
-                uses: codescan-io/codescan-scanner-action@master
+                uses: codescan-io/codescan-scanner-action@CD-2922
                 with:
                     codeScanUrl: https://test.codescan.io/
                     login: ${{secrets.SONAR_TEST_TOKEN}}
-                    organization: jan-2021
-                    projectKey: march-2021
+                    organization: b21
+                    projectKey: march-2023
+                    failOnRedQualityGate: true
                     args: |
                         sonar.verbose=true
-                        sonar.java.binaries=target
+                        sonar.java.binaries=.
 
             -   name: Upload SARIF file
                 uses: github/codeql-action/upload-sarif@v1
