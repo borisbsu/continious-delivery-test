@@ -8,7 +8,7 @@ jobs:
         steps:
             # Checkout your code repository to scan
             -   name: Checkout repository
-                uses: actions/checkout@0f81b55162f6c96942fa06de71556c12e96e2f92
+                uses: actions/checkout@v2
                 with:
                     # We must fetch at least the immediate parents so that if this is
                     # a pull request then we can checkout the head.
@@ -37,7 +37,7 @@ jobs:
                 run: mvn package -DskipTests
 
             -   name: Run Analysis
-                uses: codescan-io/codescan-scanner-action@master
+                uses: codescan-io/codescan-scanner-action@CD-2922
                 with:
                     codeScanUrl: https://test.codescan.io/
                     login: ${{secrets.SONAR_TEST_TOKEN}}
